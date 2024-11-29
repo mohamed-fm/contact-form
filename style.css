@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+:root {
+  --Green-200:hsl(148, 38%, 91%);
+  --Green-600:hsl(169, 82%, 27%);
+  --Red:hsl(0, 66%, 54%);
+  --White:hsl(0, 0%, 100%);
+  --Grey-500:hsl(186, 15%, 59%);
+  --Grey-900:hsl(187, 24%, 22%);
+}
+
+.contenar {
+  width: 100%;
+  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "karla";
+  background-color: var(--Green-200);
+  position: relative;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.success {
+  position: absolute;
+  top: 40px;
+  z-index: 1000;
+  background-color: var(--Grey-900);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.success .heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.success .heading h3 {
+  font-weight: 700;
+  font-size: 18px;
+}
+.success p {
+  font-family: 400;
+  font-size: 16px;
+}
+
+.project {
+  width: 100%;
+}
+.project .contenar .card {
+  max-width: 700px;
+  width: 700px;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.project .contenar .card h1 {
+  font-size: 32px;
+  color: var(--Grey-900);
+  font-weight: 700;
+}
+.project .contenar .card form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.project .contenar .card form fieldset {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+}
+.project .contenar .card form fieldset.full-name .input-contenar {
+  width: calc(50% - 10px);
+}
+.project .contenar .card form fieldset.query-type[data-checked=false] p {
+  display: block;
+}
+.project .contenar .card form fieldset.massage-contenear .input-contenar {
+  width: 100%;
+}
+.project .contenar .card form fieldset.massage-contenear .input-contenar textarea {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--Grey-500);
+  outline: none;
+  font-size: 20px;
+  width: 100%;
+  resize: vertical;
+  height: 100px;
+  font-family: "karla";
+}
+.project .contenar .card form fieldset.massage-contenear .input-contenar textarea[data-empty=true] ~ p {
+  display: block;
+}
+.project .contenar .card form fieldset.massage-contenear .input-contenar textarea[data-empty=true] {
+  border: 1px solid var(--Red);
+}
+.project .contenar .card form fieldset.last-checkbox .input-contenar {
+  flex-direction: row;
+  width: 100%;
+}
+.project .contenar .card form fieldset.last-checkbox .input-contenar label {
+  margin-left: 10px;
+  font-size: 18px;
+  color: var(--Grey-900);
+}
+.project .contenar .card form fieldset.last-checkbox .input-contenar input {
+  width: 18px;
+  height: 18px;
+  appearance: inherit;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 0;
+}
+.project .contenar .card form fieldset.last-checkbox .input-contenar input:checked {
+  background-image: url("./assets/images/icon-checkbox-check.svg");
+  background-position: center center;
+}
+.project .contenar .card form fieldset.submit .input-contenar {
+  width: 100%;
+}
+.project .contenar .card form fieldset.submit .input-contenar button {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--Green-600);
+  color: var(--White);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  outline: none;
+  border: none;
+  letter-spacing: 1px;
+  transition: 0.3s ease-out;
+}
+.project .contenar .card form fieldset.submit .input-contenar button:hover {
+  background-color: #084f42;
+}
+.project .contenar .card form fieldset legend {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Grey-900);
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.project .contenar .card form fieldset legend span {
+  color: var(--Green-600);
+  margin-left: 5px;
+}
+.project .contenar .card form fieldset .input-contenar {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+.project .contenar .card form fieldset .input-contenar.email-contenar {
+  width: 100%;
+}
+.project .contenar .card form fieldset .input-contenar.checkbox-contenar {
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 15px;
+  border: 1px solid var(--Grey-500);
+  border-radius: 5px;
+  width: calc(50% - 10px);
+}
+.project .contenar .card form fieldset .input-contenar.checkbox-contenar label {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.project .contenar .card form fieldset .input-contenar.checkbox-contenar input {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  padding: 0;
+  appearance: inherit;
+  cursor: pointer;
+}
+.project .contenar .card form fieldset .input-contenar.checkbox-contenar input:checked {
+  background-image: url("./assets/images/icon-radio-selected.svg");
+  background-position: center center;
+}
+.project .contenar .card form fieldset .input-contenar.checkbox-contenar:hover, .project .contenar .card form fieldset .input-contenar.checkbox-contenar:focus, .project .contenar .card form fieldset .input-contenar.checkbox-contenar:active {
+  border-color: #11ac8f;
+}
+.project .contenar .card form fieldset .input-contenar label {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Grey-900);
+}
+.project .contenar .card form fieldset .input-contenar label span {
+  color: var(--Green-600);
+  margin-left: 5px;
+  font-size: 18px;
+}
+.project .contenar .card form fieldset .input-contenar input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--Grey-500);
+  outline: none;
+  font-size: 20px;
+  font-family: "karla";
+}
+.project .contenar .card form fieldset .input-contenar input:hover, .project .contenar .card form fieldset .input-contenar input:focus, .project .contenar .card form fieldset .input-contenar input:active {
+  border-color: #11ac8f;
+}
+.project .contenar .card form fieldset .input-contenar input[data-empty=true] + p {
+  display: block;
+}
+.project .contenar .card form fieldset .input-contenar input.global-check-box[data-empty=true] ~ p {
+  display: block;
+}
+.project .contenar .card form fieldset .input-contenar input[data-empty=true] {
+  border: 1px solid var(--Red);
+}
+.project .contenar .card form fieldset .input-contenar input[aria-invalid=true] ~ .invalid-error-msg {
+  display: block;
+}
+
+.require-error-msg, .invalid-error-msg {
+  color: var(--Red);
+  height: 0;
+  display: none;
+  position: absolute;
+  bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .contenar {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .contenar {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .contenar {
+    width: 1170px;
+  }
+}
+@media (max-width: 570px) {
+  .project .contenar .card form fieldset.full-name {
+    flex-direction: column;
+    align-items: self-start;
+  }
+  .project .contenar .card form fieldset.full-name .input-contenar {
+    width: 100%;
+  }
+  .project .contenar .card form fieldset.query-type {
+    flex-direction: column;
+    align-items: self-start;
+  }
+  .project .contenar .card form fieldset.query-type .input-contenar {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

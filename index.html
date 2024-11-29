@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Contact form</title>
+
+
+</head>
+<body>
+
+  <section class="project">
+    <div class="contenar">
+      <div class="card">
+        <h1>Contact Us</h1>
+        <form action="">
+          <fieldset class="full-name">
+            <div class="input-contenar">
+              <label for="first-name">First Name <span>*</span></label>
+              <input data-empty="false"  class="global-input"  id="first-name" name="first-name" type="text"   autocomplete="name" aria-invalid="false">
+              <p class="require-error-msg error-msg first-name" id="require-error-msg error-msg">This field is required </p>
+            </div>
+            <div class="input-contenar">
+              <label for="last-name">Last Name <span>*</span></label>
+              <input data-empty="false"  class="global-input" id="last-name" name="last-name" type="text"  autocomplete="family-name" aria-invalid="false">
+              <p class="require-error-msg error-msg last-name" id="require-error-msg error-msg">This field is required</p>
+            </div>
+          </fieldset>
+          <fieldset class="email-address">
+            <div class="input-contenar email-contenar">
+              <label for="email">Email Address <span>*</span></label>
+              <input data-empty="false"  class="global-input" id="email" name="email" type="email"  autocomplete="email" aria-invalid="false">
+              <p class="require-error-msg error-msg email" id="require-error-msg error-msg">This field is required</p>
+              <p class="invalid-error-msg error-msg email" id="invalid-error-msg">Please enter a valid email address</p>
+            </div>
+          </fieldset>
+          <fieldset class="query-type" data-checked="true">
+            <legend>Query Type <span>*</span></legend>
+            <div class="input-contenar checkbox-contenar" >
+              <input class="global-check-box " id="general" name="general" type="checkbox"  onclick="onlyOne(this)"  aria-invalid="false">
+              <label for="general"> General Enquiry </label>
+            </div>
+            <div class="input-contenar checkbox-contenar">
+              <input class="global-check-box " id="support" name="general" type="checkbox"  onclick="onlyOne(this)" aria-invalid="false">
+              <label for="support">Support Request </label>
+            </div>
+            <p class="require-error-msg error-msg general" id="require-error-msg error-msg">Please select a query type</p>
+          </fieldset>
+          <fieldset class="massage-contenear">
+            <div class="input-contenar">
+              <label for="massage">Message <span>*</span></label>
+              <textarea data-empty="false" class="global-input"  name="massage" id="massage" aria-describedby="require-error-msg error-msg" aria-invalid="false"></textarea>
+              <p class="require-error-msg error-msg massage" id="require-error-msg error-msg">This field is required</p>
+            </div>
+          </fieldset>
+          <fieldset class="last-checkbox">
+            <div class="input-contenar">
+              <input data-empty="false"  class="global-check-box " id="checkbox" name="checkbox" type="checkbox"  aria-invalid="false">
+              <label for="checkbox">I consent to being contacted by the team <span>*</span></label>
+              <p class="require-error-msg error-msg checkbox" id="require-error-msg error-msg">To submit this form, please consent to being contacted</p>
+            </div>
+          </fieldset>
+          <fieldset class="submit">
+            <div class="input-contenar">
+              <button class="submit" type="submit" id="submit">Submit</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Mohamed Ragheb</a>.
+  </div>
+  <script src="main.js"></script>
+  <script>
+    function onlyOne(checkbox) {
+      const checkboxes = document.querySelectorAll('.checkbox-contenar input')
+      checkboxes.forEach((item) => {
+          if (item !== checkbox) item.checked = false
+        })
+    }
+  </script>
+</body>
+</html>
